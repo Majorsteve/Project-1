@@ -1,15 +1,23 @@
 const DOMAIN = "https://www.thecocktaildb.com/api.php";
 const button = document.querySelector("button");
 const drinkList = document.querySelector(".drink-list");
-let currentRecipe;
-
-//const displayIngrediants = 
 
 const displayInstruction = (drinkCard, drink) => {
   drinkCard.addEventListener('click', async () => {
     const resp = await axios(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink.idDrink}`)
+    const newDrink = resp.data.drinks[0];
+    let drinkKeys = Object.keys(newDrink);
+    drinkKeys = drinkKeys.filter((key) => key.includes('strIngredient'));
+    drinkKeys.forEach((key) => {
+      if (newDrink[key]) {
+        const measurement = key.replace('strIngredient', 'strMeasure')
+        const ingP = document.createElement('p');
+        ingP.innerText = `${newDrink[key]} ${newDrink[measurement]}`;
+        drinkCard.appendChild(ingP);
+      }
+    })
     const drinkInstructions = document.createElement('p');
-    drinkInstructions.innerText = resp.data.drinks[0].strInstructions;
+    drinkInstructions.innerText = newDrink.strInstructions;
     drinkCard.appendChild(drinkInstructions);
   })
 }
