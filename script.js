@@ -11,9 +11,9 @@ const displayInstruction = (drinkCard, drink) => {
     drinkKeys.forEach((key) => {
       if (newDrink[key]) {
         const measurement = key.replace('strIngredient', 'strMeasure')
-        const ingP = document.createElement('p');
-        ingP.innerText = `${newDrink[key]} ${newDrink[measurement]}`;
-        drinkCard.appendChild(ingP);
+        const recipe = document.createElement('p');
+        recipe.innerText = `${newDrink[key]} ${newDrink[measurement]}`;
+        drinkCard.appendChild(recipe);
       }
     })
     const drinkInstructions = document.createElement('p');

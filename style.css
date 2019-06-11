@@ -1,0 +1,36 @@
+body{
+  text-align: center;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+input{
+  align: center;
+}
+
+.drink-list {
+  column-count: 3;
+  padding:0;
+  list-style: none; 
+  display: inline-block;
+
+
+}
+
+.drink-list img{
+  width:50%;
+  height: 50%;
+  display: inline-block;
+  border-radius: 10%; 
+
+}
+
+.drink-list img:hover {
+  filter:blur(1px);
+  box-shadow: 5px 5px #3a4242;
+  transform: translateX(-5px);
+  transform: translateY(-5px);
+  transition: box-shadow .5s;
+}
