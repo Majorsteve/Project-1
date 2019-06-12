@@ -1,5 +1,8 @@
 body{
   text-align: center;
+  background: url("http://41.media.tumblr.com/9b6d3caf851a604d065c7510674b3fd2/tumblr_njay1uxtp01tf8vylo1_500.png");
+  background-size: cover;
+  
 }
 h1{
   text-align: center;
@@ -12,7 +15,10 @@ h1{
 }
 
 input{
-  align: center;
+  width: 130px;
+  height: 30px;
+  font-size: 22px;
+  border: 
 }
 
 .drink-list {
@@ -34,14 +40,14 @@ input{
 
 .drink-list img:hover {
   filter:blur(1px);
-  box-shadow: 5px 5px #3a4242;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: translateX(-5px);
   transform: translateY(-5px);
   transition: box-shadow .5s;
 }
 /* Modal function style */
 #modal {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.9);
   height: 100vh;
   width: 100vw;
   z-index: 10;
@@ -63,9 +69,8 @@ input{
 
 .additional-data{
   margin: 200px auto; 
-  background: blue;
-  /* width: 100px;
-  height: 100px; */
+  background:rgba(112, 108, 108, 0.58);
   padding: 30px;
+  color: white;
 }
 
