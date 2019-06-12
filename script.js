@@ -7,10 +7,12 @@ const offButton = document.querySelector(".offButton");
 
 offButton.addEventListener('click', () => {
   modal.classList.add("display-none");
+  modalDiv.innerText = "";
 })
 
 const displayInstruction = (drinkCard, drink) => {
   drinkCard.addEventListener('click', async () => {
+
     const resp = await axios(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink.idDrink}`)
     const newDrink = resp.data.drinks[0];
     let drinkKeys = Object.keys(newDrink);

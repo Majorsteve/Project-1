@@ -18,7 +18,7 @@ input{
   width: 130px;
   height: 30px;
   font-size: 22px;
-  border: 
+  /* border:  */
 }
 
 .drink-list {
@@ -65,6 +65,7 @@ input{
   position: fixed;
   top: 0;
   right: 0;
+  color: blue;
 }
 
 .additional-data{
