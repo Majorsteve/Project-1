@@ -31,11 +31,17 @@ input{
 }
 
 .drink-list img{
-  width:50%;
+  width: 50%;
   height: 50%;
   display: inline-block;
   border-radius: 10%; 
+  margin-top: 15px;
 
+}
+
+.drink-list p{
+  font-size: 20px;
+  font-weight: bold; 
 }
 
 .drink-list img:hover {
@@ -62,16 +68,19 @@ input{
 
 .offButton{
   width: 50px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  color: blue;
+  position: absolute;
+  top: 1em;
+  right: 4em;
 }
 
-.additional-data{
+
+.modal-container {
   margin: 200px auto; 
   background:rgba(112, 108, 108, 0.58);
   padding: 30px;
   color: white;
+  width: 100%;
+  position: relative;
 }
+
 

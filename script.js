@@ -42,8 +42,8 @@ const renderList = (drinks) => {
     displayInstruction(drinkImage, drink);
     const drinkName = document.createElement('p');
     drinkName.innerText = drink.strDrink;
-    drinkCard.appendChild(drinkName);
     drinkCard.appendChild(drinkImage);
+    drinkCard.appendChild(drinkName);
     drinkList.appendChild(drinkCard);
   })
 }
