@@ -81,15 +81,19 @@ h1{
   padding:0;
   list-style: none; 
   /* display: inline-block; */
-  margin-top: 25px;
+  width: 1200px;
+  max-width: 90%;
+  margin: 25px auto 0;
 }
 
 .drink-list img{
   width: 50%;
   height: 50%;
   display: inline-block;
-  border-radius: 10%; 
+  border-radius: 5px; 
   margin-top: 15px;
+  transition: 200ms ease;
+  cursor: pointer;
 }
 
 .drink-list p{
@@ -99,7 +103,6 @@ h1{
 }
 
 .drink-list img:hover {
-  filter:blur(1px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: translateX(-5px);
   transform: translateY(-5px);
@@ -130,6 +133,7 @@ h1{
 
 .modal-container {
   margin: 200px auto; 
+  font-family: Helvetica, Arial, sans-serif;
   background:rgba(112, 108, 108, 0.58);
   padding: 30px;
   color: white;
