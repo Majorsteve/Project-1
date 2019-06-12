@@ -6,16 +6,17 @@
   font-style: normal;
 
 }
+
 body{
+  margin: 0 auto !important;
   text-align: center;
-  background: url("http://41.media.tumblr.com/9b6d3caf851a604d065c7510674b3fd2/tumblr_njay1uxtp01tf8vylo1_500.png");
-  background-size: cover;
+  background: linear-gradient(#f3baba, #b1dbfd) fixed;
 }
 
 h1{
   font-family: breakregular;  
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
 }
 
 /* Search bar style from https://speckyboy.com/search-field-sexy-css/ */
@@ -23,7 +24,6 @@ h1{
   width: 500px;
   height: 40px;
   margin: 80px auto;
-  background: #444;
   background: rgba(0,0,0,.5);
   border-radius:  3px;
   border: 1px solid #fff;
@@ -76,10 +76,11 @@ h1{
 /* Drink List style */
 
 .drink-list {
-  column-count: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
   padding:0;
   list-style: none; 
-  display: inline-block;
+  /* display: inline-block; */
   margin-top: 25px;
 }
 
@@ -137,6 +138,33 @@ h1{
 }
 
 /* Media Query */
+@media only screen
+  and (max-width: 480px){
+
+    .search{
+      width: 90%;
+      
+    }
+    .search input {
+      width: 70%;
+    }
+
+    .search button{
+      width: 30%;
+    }
+
+    .modal-container{
+      width: 70%;
+    }
+    .offButton{
+      width: 10%;
+      position: relative; 
+      right: -7em;
+
+    }
+
+    
+  }
 
 
 
