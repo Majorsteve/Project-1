@@ -8,7 +8,7 @@
 }
 
 body{
-  margin: 0 auto !important;
+  /* margin: 0 auto !important; */
   text-align: center;
   background: linear-gradient(#f3baba, #b1dbfd) fixed;
 }
@@ -160,10 +160,10 @@ h1{
       width: 10%;
       position: relative; 
       right: -7em;
-
     }
-
-    
+    .modal-container{
+      margin-top: 10%;
+    }
   }
 
 
