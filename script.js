@@ -1,6 +1,13 @@
 const DOMAIN = "https://www.thecocktaildb.com/api.php";
 const button = document.querySelector("button");
 const drinkList = document.querySelector(".drink-list");
+const modalDiv = document.querySelector(".additional-data");
+const modal = document.querySelector("#modal");
+const offButton = document.querySelector(".offButton");
+
+offButton.addEventListener('click', () => {
+  modal.classList.add("display-none");
+})
 
 const displayInstruction = (drinkCard, drink) => {
   drinkCard.addEventListener('click', async () => {
@@ -13,26 +20,29 @@ const displayInstruction = (drinkCard, drink) => {
         const measurement = key.replace('strIngredient', 'strMeasure')
         const recipe = document.createElement('p');
         recipe.innerText = `${newDrink[key]} ${newDrink[measurement]}`;
-        drinkCard.appendChild(recipe);
+        modalDiv.appendChild(recipe);
       }
     })
     const drinkInstructions = document.createElement('p');
     drinkInstructions.innerText = newDrink.strInstructions;
-    drinkCard.appendChild(drinkInstructions);
+    modalDiv.appendChild(drinkInstructions);
+    modal.classList.remove("display-none");
   })
 }
+
+
 
 const renderList = (drinks) => {
   drinks.forEach((drink) => {
     const drinkCard = document.createElement('div');
     const drinkImage = document.createElement('img');
     drinkImage.src = drink.strDrinkThumb;
+    displayInstruction(drinkImage, drink);
     const drinkName = document.createElement('p');
     drinkName.innerText = drink.strDrink;
     drinkCard.appendChild(drinkName);
     drinkCard.appendChild(drinkImage);
     drinkList.appendChild(drinkCard);
-    displayInstruction(drinkCard, drink);
   })
 }
 
