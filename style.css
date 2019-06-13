@@ -16,7 +16,7 @@ body{
 h1{
   font-family: breakregular;  
   text-align: center;
-  font-size: 70px;
+  font-size: 100px;
 }
 
 /* Search bar style from https://speckyboy.com/search-field-sexy-css/ */
@@ -80,7 +80,6 @@ h1{
   grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
   padding:0;
   list-style: none; 
-  /* display: inline-block; */
   width: 1200px;
   max-width: 90%;
   margin: 25px auto 0;
