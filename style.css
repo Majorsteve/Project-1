@@ -163,6 +163,7 @@ h1{
       width: 10%;
       position: relative; 
       right: -7em;
+      top: 2px;
     }
     .modal-container{
       margin-top: 10%;
