@@ -27,5 +27,9 @@ Struggles:
 
 Extracting data from the api because of how the objects in the array were listed. Fixed through a comboination of Object.keys to find the array and using a forEach and filter method to specifically pick which objects I wanted.
 
+Win:
+
+Figuring out how to use @font-face. By taking an outside source font style and then downloading the file and then converting the file in to the correct css syntax through a website called fontsquirrel.com. 
+
 
 
